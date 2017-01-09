@@ -1,0 +1,49 @@
+// ANIMATION MIXINS -> animation class based animation (ng-class) --- start
+
+
+  @mixin animTowards($added-css-class) {
+    //define final state
+    &.#{$added-css-class}, &.#{$added-css-class}-add {
+      @content;
+    }
+  }
+
+  @mixin animReturn($added-css-class) {
+    //redifine original state
+    &.#{$added-css-class}-remove {
+      @content;
+    }
+  }
+
+// ANIMATION MIXINS -> animation class based animation (ng-class) --- end
+
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}

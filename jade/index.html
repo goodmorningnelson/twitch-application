@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html ng-app="riot-app">
+  <head>
+    <link rel="icon" type="image/ico" href="http://127.0.0.1:5000//favicon.ico">
+    <link rel="stylesheet" href="scss/main.min.css">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/anchor_smooth_scroll.js" type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/app.js" type="text/javascript"></script>
+    <title>Riot App</title>
+  </head>
+  <body class="base">
+    <div ng-controller="appCtrl" class="globalContainer">
+      <div class="box namePlate">
+        <div class="content">
+          <h1>Thomas Ruehr</h1>
+          <p>"The Morning Owl"</p>
+        </div>
+        <div class="titles">
+          <h2>Digital designer - UI / UX</h2>
+          <h2>Co-Founder of Kapsuli</h2>
+        </div>
+        <div class="decoBottom">
+          <div class="innerCircle"></div>
+        </div>
+      </div>
+      <div id="coverAnchor"></div>
+      <div class="box coverLetter">
+        <p class="first">Dear Riot,</p>
+        <p>I am a French-American digital designer, self-taught Frontend web developer and passionate aficionado of imaginary worlds. </p>
+        <p>I have had multiple experiences related to the video game and E-sport industries, worked with actors of the scene (Twitch, Gamoloco, Millenium), and built products to help the community (Kapsuli). Additionally, on a personal level, I have been involved in and attended live events as well as played on most of the current major titles competitively.</p>
+        <p>I now wish to build a career in that sector within a company I respect, to help build a product that I love.</p>
+        <p>My experience in this area as well as my confidence in my own abilities has led me to apply for a position in the visual design division at Riot Games.</p>
+        <p>Learn more about me by scrolling down.</p>
+        <p>Thank you for your time and consideration.</p>
+        <p class="tag1">Thomas Ruehr</p>
+        <p class="tag2">"The Morning Owl" </p>
+        <!--.hireMeBox//p I would love to be considered for a position at Riot Games
+        -->
+        <div class="decoCorner topLeft">
+          <div class="cornerDecoCircle"></div>
+        </div>
+        <div class="decoCorner topRight">
+          <div class="cornerDecoCircle"></div>
+        </div>
+        <div class="decoCorner botLeft">
+          <div class="cornerDecoCircle"></div>
+        </div>
+        <div class="decoCorner botRight">
+          <div class="cornerDecoCircle"></div>
+        </div>
+        <div class="decoHeading">
+          <div class="innerCircle"><img src="./riot-application/img/cover-icon.svg" alt="" class="shadow"></div>
+        </div>
+        <div class="decoBottom"></div>
+      </div>
+      <div class="box kapsuliIntro"> 
+        <p>what can I bring to Riot Game right now</p>
+        <div class="decoTop"></div>
+        <div class="decoBot"></div>
+      </div>
+      <div id="kapsuliAnchor"></div>
+      <div class="box kapsuli">
+        <div class="playerBox">
+          <div class="playerSelectorsBox">
+            <div class="playerContainer">
+              <div ng-class="{'on':playerSelectorModel === 'kap'}" class="player kapsuliPlayer"><img src="./riot-application/img/kapsuli.png" alt=""></div>
+              <div ng-class="{'on':playerSelectorModel === 'star'}" class="player allStarPlayer"><img src="./riot-application/img/all-star.jpg" alt=""></div>
+              <div ng-class="{'on':playerSelectorModel === 'lcs'}" class="player lcsPlayer"><img src="./riot-application/img/lcs.jpg" alt=""></div>
+            </div>
+            <div class="selectors">
+              <div ng-model="playerSelectorModel" uib-btn-radio="'kap'" class="kap select">Kapsuli Player</div>
+              <div ng-model="playerSelectorModel" uib-btn-radio="'star'" class="star select">All Star 2016</div>
+              <div ng-model="playerSelectorModel" uib-btn-radio="'lcs'" class="lcs select">LCS 2016</div>
+            </div>
+          </div>
+        </div>
+        <div class="contentBox">
+          <h1 class="title">Kapsuli</h1>
+          <div class="content">
+            <p>Founded in France with two friends to help the streaming community, Kapsuli is a social media platform designed to help Twitch broadcasters to build a strong social presence. </p>
+            <p>Kapsuli features a way to embed a live Twitch stream visible within Twitter. It also allows broadcasters to program tweets to be sent automatically while on the air, transforming the way broadcasters interact with their followers, as well as helping them grow a larger audience.</p>
+            <div class="capsuleDescription">
+              <div ng-show="playerSelectorModel === 'kap'" class="kapDescription">
+                <h1>The Kapsuli Player</h1>
+                <p>• Easy and fast way to embed your live feed into Twitter.</p>
+                <p>• A customizable player, helping you build your brand.</p>
+                <p>• Real estate for additional revenue stream through extended sponsor exposure.</p>
+              </div>
+              <div ng-show="playerSelectorModel === 'lcs'" class="lcsDescription">
+                <h1>LCS 2016 Player</h1>
+                <p>• Improved brand exposure</p>
+                <p>• Integration capabilities for multiple API to feed information about games being played, player stats, schedule.</p>
+                <p>• Link to external ressources (LolEsport website for example).</p>
+              </div>
+              <div ng-show="playerSelectorModel === 'star'" class="starDescription">
+                <h1>All Star 2016 Player</h1>
+                <p>• API based live update of event status</p>
+                <p>• Link to external ressources (LolEsport website)</p>
+                <p>• Brand exposure for dynamique events such as allstar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="access"></div>
+        </div>
+        <div class="decoBot">   </div>
+      </div>
+      <div class="box skillsIntro">
+        <p>What will I be bringing as a Rioter ?</p>
+        <div class="decoTop"></div>
+        <div class="decoBot"></div>
+      </div>
+      <div id="skillsAnchor"></div>
+      <div class="box skills">
+        <div class="skillSelectors">
+          <div ng-model="skillSelectorModel" uib-btn-radio="'tool'" class="tool skillselect">Skills</div>
+          <div ng-model="skillSelectorModel" uib-btn-radio="'product'" class="product skillselect">Knowledge</div>
+          <div ng-model="skillSelectorModel" uib-btn-radio="'knowledge'" class="knowledge skillselect">Dedication</div>
+          <!--.observation.skillselect(ng-model="skillSelectorModel" uib-btn-radio="'observation'") Observation-->
+          <div ng-model="skillSelectorModel" uib-btn-radio="'teamwork'" class="teamwork skillselect">Teamwork</div>
+        </div>
+        <div class="skillContent">
+          <div ng-show="skillSelectorModel === 'tool'" class="content tool">
+            <p class="quote">"I am a mechanical player. I can CS well and land clutch skill shots."</p>
+            <p>I have not only a professional grade mastery of common tools used across the creative industry, but also a strong working experience with front-end web development (user interface, user experience). I am also able to code using the best modern practices.</p>
+            <p>This combination of abilities allows me to understand the possibilities and limitations of implementing certain features in a digital space. It also provides me with the means to interact with both designers and developers to establish efficient channels of communication. </p>
+            <p class="note">Design : Adobe Creative Suit (Photoshop, Illustrator, InDesign, After Effect, Edge Animate, etc.), Sketch, photography, 3D renderings...</p>
+            <p class="note">Web development : HTML5 (jade), CCS3 (scss), Angular, PHP, bootstrap, material design, Webpack, node.js...</p>
+            <p class="note">(this page was coded using the Atom editor, Jade, SCSS, Angular,  Boostrap, gitHub and gitKraken)</p>
+            <div class="toolVisuBox">
+              <div class="codeWindow">
+                <div class="code"><img src="./riot-application/img/code.png" alt=""></div>
+                <div class="kent"><img src="./riot-application/img/Kent-desk.png" alt=""></div>
+                <div class="pepper"><img src="./riot-application/img/Peppers-desk.png" alt=""></div>
+              </div>
+              <!--.visuBoxWrap.ve
+              //.visuBox.v
+                //img.vecto(src="./riot-application/img/toolVisu/bomber.svg")
+              -->
+              <!--.visuBoxWrap.re
+              //.visuBox.r
+                //img.realist(src="./riot-application/img/toolVisu/realistic.jpg")
+              -->
+              <!--.visuBoxWrap.pi
+              //.visuBox.p
+                //img.pixel(src="./riot-application/img/toolVisu/kent-desk.png")
+              -->
+            </div>
+          </div>
+          <div ng-show="skillSelectorModel === 'product'" class="content product">
+            <p class="quote">"I have game knowledge, and I know how to analyse meta trends" </p>
+            <p>My experience with Kapsuli brought me a strong understanding of how to build a product catering to the gaming community. In the process I have encountered many situations, from brainstorming ideas, establishing strong UX and UI foundations, technical development problem solving, media campaign implications, adressing community feedback and modifications entailed by it.</p>
+            <p>I have learned that to build a successful product that resonates and engages with the gaming community, one needs to communicate not only with the hard core players, reddit investigators, and meme creators but also with the casual players, with very few fantasy and game-related references.</p>
+            <p>I can identify with those two audiences and discern their current and future needs.</p>
+            <div class="productDeco">
+              <div class="productDecoBox"><img src="./riot-application/img/deco-product.svg" alt=""></div>
+              <div ng-model="shroomModel" uib-btn-checkbox class="shroomBox"><img src="./riot-application/img/shroom-base.svg" alt="" class="base"><img src="./riot-application/img/shroom-bot.svg" alt="" class="bot"><img src="./riot-application/img/shroom-top.svg" alt="" class="top">
+                <div class="sprite"></div>
+                <div class="refresh"><img src="./riot-application/img/shroom-refresh.svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div ng-show="skillSelectorModel === 'knowledge'" class="content knowledge">
+            <p class="quote">"I have spent over 150 days of my life on league of legends"</p>
+            <p>I strive to be proud of what I am building, and this pride not only pushes me to deliver a strong product but also challenges me to be better and more efficient at what I do. I pride myself in constantly learning and growing as a designer.</p>
+            <p>I have dedicated this last year to building Kapsuli. I now wish to bring all my experiences to bear and help further improve the game that I love or build new content and products for Riot Games.</p>
+            <div class="dedicationDeco"><img src="/./riot-application/img/dedication2.svg" alt=""></div>
+          </div>
+          <div ng-show="skillSelectorModel === 'observation'" class="content observation">
+            <p>I keep myself informed of the latest design and tech trends to make the best use of current and upcoming innovation in the field I am working in.  </p>
+          </div>
+          <div ng-show="skillSelectorModel === 'teamwork'" class="content teamwork">
+            <p class="quote">"I am a Shen one-trick pony and will not hesitate to come to the rescue and make clutching pro flash taunts."</p>
+            <p>Although I am very efficient working alone, I work best as part of a unit. I enjoy working with others and take pride in facilitating communication between different trades. I also work well under pressure and deliver high quality product in a timely fashion.</p>
+            <p>I have working experience using tools below to improve team coordination and workflow, either to enhance communication within the team or to devise work protocols to ensure an efficient work environment. </p>
+            <div class="iconBox"> <a href="https://slack.com/" target="_blank">
+                <div class="bloc slack"><img src="./riot-application/img/teamIcon/slack.svg"></div></a><a href="https://github.com/" target="_blank">
+                <div class="bloc github"><img src="./riot-application/img/teamIcon/github.svg"></div></a><a href="https://www.gitkraken.com/" target="_blank">
+                <div class="bloc gitkraken"><img src="./riot-application/img/teamIcon/gitkraken.svg"></div></a><a href="https://gitlab.com/" target="_blank">
+                <div class="bloc gitlab"><img src="./riot-application/img/teamIcon/gitlab.svg"></div></a><a href="https://www.invisionapp.com/" target="_blank">
+                <div class="bloc invision"><img src="./riot-application/img/teamIcon/invision.svg"></div></a><a href="https://proto.io/" target="_blank">
+                <div class="bloc proto"><img src="./riot-application/img/teamIcon/proto.svg"></div></a><a href="https://trello.com/" target="_blank">
+                <div class="bloc trello"><img src="./riot-application/img/teamIcon/trello.svg"></div></a><a href="https://www.skype.com" target="_blank">
+                <div class="bloc skype"><img src="./riot-application/img/teamIcon/skype.svg"></div></a></div>
+          </div>
+        </div>
+        <div class="decoHeading">
+          <div class="innerCircle"><img src="./riot-application/img/skill-icon.svg" alt="" class="shadow"></div>
+        </div>
+        <div class="decoBot"></div>
+      </div>
+      <div id="resumeAnchor"></div>
+      <div class="box resume">
+        <div class="content">
+          <p>Learn more about me or access my resume to get some insight on my previous experiences.</p>
+          <ul>
+            <li>
+              <p>Classically trained in fine arts, I have a professional degree in  Graphic Design and Brand Identity from "École professionnelle supérieure d'arts graphiques et d'architecture" in Paris, France.</p>
+            </li>
+            <li>
+              <p>Builder of all sorts. I am currently building my own custom-wired mechanical keyboard and handheld console for retro games.</p>
+            </li>
+            <li>
+              <p>Hip-Hop dancer (8 years dancing and performing)</p>
+            </li>
+            <li>
+              <p>From a young age, I have been immersed in High-Fantasy and Sci-Fi. I have lived within these universes in many ways. I have been entranced by literature. Crushed opponents in table-top games and in Magic the Gathering. I have participated in LARPing, I have erected hole Warhammer armies. And of course video games of all kinds.</p>
+            </li>
+            <li>
+              <p>Best Rogue/Resto-Druid of my battleground in Season 3 (World of Warcraft), Platinum in League of Legends and Starcraft 2, rank 10 in HearthStone.</p>
+            </li>
+            <li>
+              <p>Master reddit lurker.</p>
+            </li>
+            <li>
+              <p>Ikea builder virtuoso</p>
+            </li>
+          </ul>
+        </div><a href="http://goodmorningnelson.com/resume/" target="_blank">
+          <div class="accessResume"></div></a>
+        <div class="decoHeading">
+          <div class="innerCircle"><img src="./riot-application/img/resume-icon.svg" alt="" class="shadow"></div>
+        </div>
+      </div>
+      <div id="contactAnchor"></div>
+      <div class="box contact">
+        <div class="content">
+          <h1>Contact</h1>
+          <h2>Email : mtr.ruehr@gmail.com</h2>
+          <h2>Phone : (xxx) xxx xxxx</h2>
+        </div>
+      </div>
+      <div class="link"></div>
+      <div class="navBox"> 
+        <div class="diamondBox"><a anchor-smooth-scroll="coverAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'cover'" ng-class="{'on': scroll &gt;= 0 &amp;&amp; scroll &lt; 700}" class="diamond"></div></a><a anchor-smooth-scroll="kapsuliAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'kapsuli'" ng-class="{'on': scroll &gt; 700 &amp;&amp; scroll &lt; 1900 }" class="diamond"></div></a><a anchor-smooth-scroll="skillsAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'skills'" ng-class="{'on': scroll &gt; 1900 &amp;&amp; scroll &lt; 2600}" class="diamond"></div></a><a anchor-smooth-scroll="resumeAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'resume'" ng-class="{'on': scroll &gt; 2600 &amp;&amp; scroll &lt; 3400}" class="diamond"></div></a><a anchor-smooth-scroll="contactAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'contact'" ng-class="{'on': scroll &gt; 3400}" class="diamond"></div></a></div>
+        <div class="descriptionBox"><a anchor-smooth-scroll="coverAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'cover'" ng-class="{'on': scroll &gt;= 0 &amp;&amp; scroll &lt; 700}" class="description">Letter</div></a><a anchor-smooth-scroll="kapsuliAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'kapsuli'" ng-class="{'on': scroll &gt; 700 &amp;&amp; scroll &lt; 1900}" class="description">Kapsuli</div></a><a anchor-smooth-scroll="skillsAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'skills'" ng-class="{'on': scroll &gt; 1900 &amp;&amp; scroll &lt; 2600}" class="description">Skills</div></a><a anchor-smooth-scroll="resumeAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'resume'" ng-class="{'on': scroll &gt; 2600 &amp;&amp; scroll &lt; 3400}" class="description">Resume</div></a><a anchor-smooth-scroll="contactAnchor">
+            <div ng-model="navBtnModel" uib-btn-radio="'contact'" ng-class="{'on': scroll &gt; 3400}" class="description">Contact</div></a></div>
+      </div>
+      <!--.decoTest 
+      //img(src="./riot-application/img/test-deco.svg", alt=""
+      
+      -->
+      <div scroll-position="scroll" class="scrollDebug">{{scroll}}</div>
+    </div>
+  </body>
+</html>
